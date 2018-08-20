@@ -1,7 +1,4 @@
 module.exports = {
-    resolver: {
-        platforms: ['custom']
-    },
     watch: false,
     resetCache: true,
     createModuleIdFactory: () => (path) => {

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "dev-build": "react-native bundle --reset-cache --platform android --dev true --minify false --entry-file index.js --bundle-output ./build/index.android-dev.bundle --assets-dest ./build/assets --config ../../../../rn-cli.config.js",
+    "dev-build": "react-native bundle --reset-cache --platform android --dev true --minify false --entry-file index.js --bundle-output ./build/index.android-dev.bundle --assets-dest ./build/assets --config ../../../../red_pym/metro.config.json",
     "prod-build": "react-native bundle --platform android --dev false --minify true --entry-file index.js --bundle-output ./build/index.android-prod.bundle --assets-dest ./build/assets",
     "haul-dev-build": "npm run haul bundle -- --platform android --bundle-output ./build/index.bundle --assets-dest ./build/assets",
     "test": "jest",

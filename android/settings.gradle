@@ -1,0 +1,3 @@
+rootProject.name = 'bundleTester'
+
+include ':app'

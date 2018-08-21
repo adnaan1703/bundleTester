@@ -1,20 +1,24 @@
+'use strict';
+
+const path = require('path');
+
+// const ROOT_PATH = path.resolve(__dirname, 'basic_bundle');
+const ROOT_PATH = '/Users/adnaan.ahmed/Projects/open/bundleTester';
+
 module.exports = {
-    watch: false,
-    resetCache: true,
-    createModuleIdFactory: () => (path) => {
-        let hash = 0, i, chr, len;
-        if (this.length === 0) return hash;
-        for (i = 0, len = path.length; i < len; i++) {
-            chr = path.charCodeAt(i);
-            hash = ((hash << 5) - hash) + chr;
-            hash |= 0;
-        }
-        console.log(hash);
-        return hash;
-    },
+    cacheStores: [],
+    maxWorkers: 1,
+    projectRoot: ROOT_PATH,
     reporter: {
-        update: () => {
-            console.log('please log this, please!')
+        update() {
+            console.log('This is logged... wtf!');
         }
+    },
+    transformModulePath: require.resolve('../node_modules/metro/src/reactNativeTransformer'),
+    resolver: {
+        useWatchman: false
+    },
+    transformer: {
+        assetRegistryPath: path.join(ROOT_PATH, 'build/assets')
     }
 };

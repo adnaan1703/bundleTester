@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import {sayHello} from "./greetings.custom";
+import {sayHello} from "./greetings";
 
 const instructions = Platform.select({
     ios: sayHello('ios'),

@@ -1,4 +1,5 @@
+import {decode} from "he";
 export const toUpper = (str) => {
     str = str.toUpperCase();
-    return `MAKING OF WOW ${str}`;
+    return decode(`MAKING OF WOW ${str}`);
 };

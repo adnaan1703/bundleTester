@@ -58,3 +58,4 @@ buck-out/
 # Haul
 #
 haul-debug.log
+dist/
